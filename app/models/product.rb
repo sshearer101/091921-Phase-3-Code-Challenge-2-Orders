@@ -18,7 +18,7 @@ class Product < ActiveRecord::Base
     end
 
     def volume
-
+        # self.orders.sum(:num_items - cancel_order)
     end
 
 end

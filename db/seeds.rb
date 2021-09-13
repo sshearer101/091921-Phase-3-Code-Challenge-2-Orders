@@ -17,7 +17,7 @@ product4 = Product.create(name: "Ballpoint Pens", price: 2)
 product5 = Product.create(name: "Scotch Tape", price: 3)
 
 puts "Creating orders..."
-order1 = Order.create(num_items: 10, status: "On the way!", product_id: product1.id, customer_id: customer1.id, delivered: false)
+order1 = Order.create(num_items: 10, status: "On the way!", product_id: product1.id, customer_id: customer1.id, delivered: true)
 order2 = Order.create(num_items: 5, status: "Held up!", product_id: product2.id, customer_id: customer1.id, delivered: false)
 order3 = Order.create(num_items: 1, status: "Delivered!", product_id: product3.id, customer_id: customer1.id, delivered: true)
 
@@ -52,3 +52,11 @@ puts
 
 puts "number ordered"
 puts product1.number_ordered
+puts
+
+# puts "volume"
+# puts product1.volume
+
+
+# puts "cancel order"
+# puts customer1.cancel_order(product1)

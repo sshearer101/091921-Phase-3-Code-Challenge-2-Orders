@@ -11,9 +11,9 @@ class Order < ActiveRecord::Base
     end
 
     def deliver 
-        if self.delivered = true
+        if self.delivered == true
         self.status = "delivered"
+        else self.status = "on the way"
         end
-       
     end
 end
