@@ -14,11 +14,11 @@ class Product < ActiveRecord::Base
 
     def number_ordered
         self.orders.sum(:num_items)
-      
     end
 
-    def volume
-        # self.orders.sum(:num_items - cancel_order)
-    end
+    # def volume
+    #     if self.orders.sum(:num_items)
+        
+    # end
 
 end
