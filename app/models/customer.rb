@@ -14,7 +14,15 @@ class Customer < ActiveRecord::Base
     #     :status = cancelled 
     # end
 
+
+    # def cancel_order(order)
+    #    if self.orders
+        
+    #     end
+    # end
+
     def total_spent
-       self.products.sum(:price)
+        price_array = self.product.map {|product| product.price}
+        price_array.sum()
     end
 end

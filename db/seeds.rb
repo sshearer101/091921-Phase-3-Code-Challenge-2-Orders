@@ -17,51 +17,52 @@ product4 = Product.create(name: "Ballpoint Pens", price: 2)
 product5 = Product.create(name: "Scotch Tape", price: 3)
 
 puts "Creating orders..."
-order1 = Order.create(num_items: 3, status: "On the way!", product_id: product1.id, customer_id: customer1.id, delivered: true)
-order2 = Order.create(num_items: 2, status: "Held up!", product_id: product2.id, customer_id: customer1.id, delivered: false)
+# order1 = Order.create(num_items: 3, status: "On the way!", product_id: product1.id, customer_id: customer1.id, delivered: true)
+order2 = Order.create(num_items: 1, status: "Held up!", product_id: product2.id, customer_id: customer1.id, delivered: false)
 order3 = Order.create(num_items: 1, status: "Delivered!", product_id: product3.id, customer_id: customer1.id, delivered: true)
 
 
 puts "Seeding done!"
 puts
 
-puts order1.num_items
-puts order2.status
-puts order3.delivered
+# puts order1.num_items
+# puts order2.status
+# puts order3.delivered
 
-puts
-puts "total price"
-puts order1.total_price
-puts
+# puts
+# puts "total price"
+# puts order1.total_price
+# puts
 
-puts "print invoice"
-puts order1.print_invoice
+# puts "print invoice"
+# puts order1.print_invoice
 
-puts
-puts "deliver"
-puts order1.deliver
-puts order2.deliver
-puts order3.deliver
+# puts
+# puts "deliver"
+# puts order1.deliver
+# puts order2.deliver
+# puts order3.deliver
 
 
-puts 
-order4 = Order.create(num_items: 3, status: "other", product_id: product1.id, customer_id: customer1.id, delivered: false)
-puts "all invoices"
-puts product1.print_all_invoices
-puts
+# puts 
+# order4 = Order.create(num_items: 3, status: "other", product_id: product1.id, customer_id: customer1.id, delivered: false)
+# puts "all invoices"
+# puts product1.print_all_invoices
+# puts
 
-puts "number ordered"
-puts product1.number_ordered
-puts
+# puts "number ordered"
+# puts product1.number_ordered
+# puts
 
 
 
 # puts "cancel order"
-# puts customer1.cancel_order(product1)
+# puts customer1.cancel_order(order1)
 
 # puts "volume"
 # puts product1.volume
 
-puts "total spent"
-puts customer1.total_spent
+# puts "total spent"
+# puts customer1.total_spent
+
 
